@@ -14,10 +14,10 @@ export function Resources() {
       <div className="grid gap-4 lg:grid-cols-2">
         <SectionPlaceholder
           title="Useful links"
-          description="Links to helpful resources for collaborators and visitors."
+          description="TODO: Content will be added here."
           isEmpty={usefulLinks.length === 0}
           emptyTitle="Useful links"
-          emptyDescription="Add links to teaching materials, partner pages, or related communities."
+          emptyDescription="TODO: Content will be added here."
           contentClassName="grid gap-4"
         >
           {usefulLinks.map((resource) => (
@@ -32,10 +32,10 @@ export function Resources() {
 
         <SectionPlaceholder
           title="Documents"
-          description="Reference materials and lab documentation that visitors can browse."
+          description="TODO: Content will be added here."
           isEmpty={documents.length === 0}
           emptyTitle="Documents"
-          emptyDescription="Add documents such as methods guides, reports, or reading lists."
+          emptyDescription="TODO: Content will be added here."
           contentClassName="grid gap-4"
         >
           {documents.map((resource) => (
@@ -52,10 +52,10 @@ export function Resources() {
       <div className="grid gap-4 lg:grid-cols-2">
         <SectionPlaceholder
           title="External resources"
-          description="Related datasets, demos, and partner resources."
+          description="TODO: Content will be added here."
           isEmpty={externalResources.length === 0}
           emptyTitle="External resources"
-          emptyDescription="Add community tools, datasets, or external references here."
+          emptyDescription="TODO: Content will be added here."
           contentClassName="grid gap-4"
         >
           {externalResources.map((resource) => (
@@ -71,11 +71,12 @@ export function Resources() {
 
         <SectionPlaceholder
           title="Resource categories"
-          description="A compact overview of how the lab organizes internal resources."
+          description="TODO: Content will be added here."
           emptyTitle="Resource categories"
-          emptyDescription="Add a short explanation of categories, tags, or archive structure."
+          emptyDescription="TODO: Content will be added here."
         />
       </div>
     </div>
   );
 }
+

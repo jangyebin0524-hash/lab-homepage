@@ -19,8 +19,8 @@ export function SectionPlaceholder({
   title,
   description,
   isEmpty = true,
-  emptyTitle = "More content coming soon",
-  emptyDescription = "Add richer content here as the lab profile grows.",
+  emptyTitle = "TODO / Placeholder",
+  emptyDescription = "TODO: Content will be added here.",
   children,
   className,
   contentClassName,
@@ -53,7 +53,6 @@ export function SectionPlaceholder({
     </Card>
   );
 }
-
 
 
 

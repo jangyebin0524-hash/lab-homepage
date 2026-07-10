@@ -14,10 +14,10 @@ export function Contact() {
       <div className="grid gap-4 lg:grid-cols-2">
         <SectionPlaceholder
           title="Contact details"
-          description="The best ways to reach the lab for collaboration or general inquiries."
+          description="TODO: Content will be added here."
           isEmpty={!hasEmail}
           emptyTitle="Contact details"
-          emptyDescription="Add email, office hours, or a contact form here."
+          emptyDescription="TODO: Content will be added here."
           contentClassName="grid gap-4"
         >
           {siteInfo.email ? <ItemCard title="Email" description={siteInfo.email} /> : null}
@@ -33,10 +33,10 @@ export function Contact() {
 
         <SectionPlaceholder
           title="Visit the lab"
-          description="A quick overview of the lab's physical location and visiting information."
+          description="TODO: Content will be added here."
           isEmpty={!hasLocation}
           emptyTitle="Visit the lab"
-          emptyDescription="Add location details or visiting instructions here."
+          emptyDescription="TODO: Content will be added here."
         >
           <p className="text-sm leading-6 text-slate-700">
             {locationInfo.address || siteInfo.address}
@@ -47,10 +47,10 @@ export function Contact() {
       <div className="grid gap-4 lg:grid-cols-2">
         <SectionPlaceholder
           title="Map"
-          description="An embedded map to help visitors find the lab."
+          description="TODO: Content will be added here."
           isEmpty={!hasMap}
           emptyTitle="Map"
-          emptyDescription="Add a map link or embed once the location is finalized."
+          emptyDescription="TODO: Content will be added here."
         >
           <iframe
             src={locationInfo.mapEmbedUrl}
@@ -62,10 +62,10 @@ export function Contact() {
 
         <SectionPlaceholder
           title="External links"
-          description="Useful links for office, collaboration, or follow-up contact."
+          description="TODO: Content will be added here."
           isEmpty={externalLinks.length === 0}
           emptyTitle="External links"
-          emptyDescription="Add links to calendar invites, office hours, or partner pages."
+          emptyDescription="TODO: Content will be added here."
           contentClassName="grid gap-4"
         >
           {externalLinks.map((item) => (
@@ -81,10 +81,11 @@ export function Contact() {
 
       <SectionPlaceholder
         title="Notes for visitors"
-        description="Additional context for scheduling meetings or planning a visit."
+        description="TODO: Content will be added here."
         emptyTitle="Notes for visitors"
-        emptyDescription="Add practical notes such as meeting availability or visitor guidelines."
+        emptyDescription="TODO: Content will be added here."
       />
     </div>
   );
 }
+

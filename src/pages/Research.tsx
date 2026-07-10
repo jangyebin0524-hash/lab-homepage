@@ -14,10 +14,10 @@ export function Research() {
     <div className="space-y-4">
       <SectionPlaceholder
         title="Research areas"
-        description="Core themes that connect our methods, deployments, and design practice."
+        description="TODO: Content will be added here."
         isEmpty={researchTopics.length === 0}
         emptyTitle="Research areas"
-        emptyDescription="Add one or more research themes to showcase the lab's focus areas."
+        emptyDescription="TODO: Content will be added here."
         contentClassName="grid gap-4 lg:grid-cols-3"
       >
         {researchTopics.map((topic) => (
@@ -33,10 +33,10 @@ export function Research() {
       <div className="grid gap-4 lg:grid-cols-2">
         <SectionPlaceholder
           title="Research keywords"
-          description="The vocabulary that characterizes the lab's current programs."
+          description="TODO: Content will be added here."
           isEmpty={researchKeywords.length === 0}
           emptyTitle="Research keywords"
-          emptyDescription="Add keywords that describe the lab's work."
+          emptyDescription="TODO: Content will be added here."
         >
           <div className="flex flex-wrap gap-2">
             {researchKeywords.map((keyword) => (
@@ -51,10 +51,10 @@ export function Research() {
         </SectionPlaceholder>
         <SectionPlaceholder
           title="Research overview image"
-          description="A visual that summarizes the main research pipeline or workflow."
+          description="TODO: Content will be added here."
           isEmpty={!hasDiagram}
           emptyTitle="Research overview image"
-          emptyDescription="Upload a diagram or photo to explain the lab's methodology."
+          emptyDescription="TODO: Content will be added here."
         >
           <div className="space-y-4">
             {researchDiagram.imageUrl ? (
@@ -72,10 +72,10 @@ export function Research() {
       </div>
       <SectionPlaceholder
         title="Related publications"
-        description="Representative papers and articles that connect to the current research themes."
+        description="TODO: Content will be added here."
         isEmpty={relatedPublications.length === 0}
         emptyTitle="Related publications"
-        emptyDescription="Add featured papers to highlight recent work."
+        emptyDescription="TODO: Content will be added here."
         contentClassName="grid gap-4 lg:grid-cols-2"
       >
         {relatedPublications.map((publication) => (
@@ -91,6 +91,7 @@ export function Research() {
     </div>
   );
 }
+
 
 
 

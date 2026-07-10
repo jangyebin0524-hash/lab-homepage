@@ -7,10 +7,10 @@ export function JoinUs() {
     <div className="space-y-4">
       <SectionPlaceholder
         title="Recruitment opportunities"
-        description="Current openings and the kinds of people we are hoping to welcome."
+        description="TODO: Content will be added here."
         isEmpty={joinOpenings.length === 0}
         emptyTitle="Recruitment opportunities"
-        emptyDescription="Add current openings and qualifications here."
+        emptyDescription="TODO: Content will be added here."
         contentClassName="grid gap-4 lg:grid-cols-2"
       >
         {joinOpenings.map((opening) => (
@@ -26,16 +26,16 @@ export function JoinUs() {
       <div className="grid gap-4 lg:grid-cols-2">
         <SectionPlaceholder
           title="How to apply"
-          description="A simple overview of the application steps and materials we request."
+          description="TODO: Content will be added here."
           emptyTitle="How to apply"
-          emptyDescription="Add your application instructions and contact details here."
+          emptyDescription="TODO: Content will be added here."
         />
         <SectionPlaceholder
           title="Frequently asked questions"
-          description="Common questions for prospective students and collaborators."
+          description="TODO: Content will be added here."
           isEmpty={joinFaqs.length === 0}
           emptyTitle="Frequently asked questions"
-          emptyDescription="Add FAQs for the application process or lab expectations."
+          emptyDescription="TODO: Content will be added here."
           contentClassName="grid gap-4"
         >
           {joinFaqs.map((faq) => (
@@ -46,5 +46,6 @@ export function JoinUs() {
     </div>
   );
 }
+
 
 

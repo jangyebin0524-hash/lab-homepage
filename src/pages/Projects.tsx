@@ -7,10 +7,10 @@ export function Projects() {
     <div className="grid gap-4 lg:grid-cols-2">
       <SectionPlaceholder
         title="Current and recent projects"
-        description="Selected lab initiatives that show the breadth of our applied research."
+        description="TODO: Content will be added here."
         isEmpty={projects.length === 0}
         emptyTitle="Current and recent projects"
-        emptyDescription="Add active or completed projects to tell the story of the group's work."
+        emptyDescription="TODO: Content will be added here."
         contentClassName="grid gap-4"
       >
         {projects.map((project) => (
@@ -27,10 +27,10 @@ export function Projects() {
 
       <SectionPlaceholder
         title="Funding information"
-        description="The grants and sponsorship that support our research programs."
+        description="TODO: Content will be added here."
         isEmpty={fundingInformation.length === 0}
         emptyTitle="Funding information"
-        emptyDescription="Add external support and funding partners to highlight the lab's resources."
+        emptyDescription="TODO: Content will be added here."
         contentClassName="grid gap-4"
       >
         {fundingInformation.map((funding) => (
@@ -45,10 +45,10 @@ export function Projects() {
 
       <SectionPlaceholder
         title="Milestones"
-        description="A timeline of major launches, improvements, and public-facing achievements."
+        description="TODO: Content will be added here."
         isEmpty={projectTimeline.length === 0}
         emptyTitle="Milestones"
-        emptyDescription="Add key milestones to show the lab's growth and accomplishments."
+        emptyDescription="TODO: Content will be added here."
         contentClassName="grid gap-4 lg:col-span-2"
         className="lg:col-span-2"
       >
@@ -64,5 +64,6 @@ export function Projects() {
     </div>
   );
 }
+
 
 

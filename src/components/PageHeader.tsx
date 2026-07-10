@@ -6,8 +6,8 @@
 
 export function PageHeader({
   title,
-  eyebrow = "Research group",
-  description = "Explore the lab's work, team, and latest updates.",
+  eyebrow = "TODO",
+  description = "TODO: Content will be added here.",
 }: PageHeaderProps) {
   return (
     <header className="mb-6 border-b border-slate-200 pb-5 sm:mb-8 sm:pb-6">
@@ -23,7 +23,6 @@ export function PageHeader({
     </header>
   );
 }
-
 
 
 

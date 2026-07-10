@@ -10,30 +10,30 @@ export function Home() {
   return (
     <div className="space-y-4">
       <SectionPlaceholder
-        title="Welcome to the lab"
-        description="We study how people and intelligent systems can collaborate through natural, multimodal experiences."
+        title="Hero Section"
+        description="TODO: Content will be added here."
         isEmpty={false}
         contentClassName="grid gap-4 lg:grid-cols-[1fr_1fr_1.2fr]"
         className="shadow-soft"
       >
         <PlaceholderCard
-          title={siteInfo.labName}
-          description={siteInfo.affiliation}
+          title={siteInfo.labName || "Lab Name Placeholder"}
+          description="TODO: Content will be added here."
         />
         <PlaceholderCard
-          title="What we build"
-          description={siteInfo.shortDescription}
+          title="TODO / Placeholder"
+          description={siteInfo.shortDescription || "TODO: Content will be added here."}
         />
         {siteInfo.heroImageUrl ? (
           <img
             src={siteInfo.heroImageUrl}
-            alt="Lab members and research setup"
+            alt=""
             className="aspect-video w-full rounded-md border border-slate-200 object-cover"
           />
         ) : (
           <PlaceholderCard
-            title="Research in motion"
-            description="A snapshot of our prototypes, deployments, and collaborative projects."
+            title="TODO / Placeholder"
+            description="TODO: Content will be added here."
           />
         )}
       </SectionPlaceholder>
@@ -41,10 +41,10 @@ export function Home() {
       <div className="grid gap-4 lg:grid-cols-2">
         <SectionPlaceholder
           title="Research overview"
-          description="A short look at the themes guiding our work and the questions we explore."
+          description="TODO: Content will be added here."
           isEmpty={!hasResearchOverview}
-          emptyTitle="Research overview"
-          emptyDescription="Add a summary of the lab's research themes and focus areas."
+          emptyTitle="TODO / Placeholder"
+          emptyDescription="TODO: Content will be added here."
         >
           <div className="space-y-4">
             {siteInfo.summary ? (
@@ -67,10 +67,10 @@ export function Home() {
 
         <SectionPlaceholder
           title="Recent updates"
-          description="Recent research highlights, announcements, and community activity."
+          description="TODO: Content will be added here."
           isEmpty={newsItems.length === 0 && homeHighlights.length === 0}
-          emptyTitle="Recent updates"
-          emptyDescription="Add new highlights or news items to keep the homepage current."
+          emptyTitle="TODO / Placeholder"
+          emptyDescription="TODO: Content will be added here."
           contentClassName="space-y-3"
         >
           {[...homeHighlights, ...newsItems].map((item) => (
@@ -87,10 +87,10 @@ export function Home() {
 
       <SectionPlaceholder
         title="Quick links"
-        description="Jump directly to the sections that matter most for visitors and collaborators."
+        description="TODO: Content will be added here."
         isEmpty={siteInfo.quickLinks.length === 0}
-        emptyTitle="Quick links"
-        emptyDescription="Add links to open positions, publications, or contact details."
+        emptyTitle="TODO / Placeholder"
+        emptyDescription="TODO: Content will be added here."
         contentClassName="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
       >
         {siteInfo.quickLinks.map((link) => (

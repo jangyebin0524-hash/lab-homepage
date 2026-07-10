@@ -9,8 +9,8 @@ type PlaceholderCardProps = {
 };
 
 export function PlaceholderCard({
-  title = "More content coming soon",
-  description = "Add richer content here as the lab profile grows.",
+  title = "TODO / Placeholder",
+  description = "TODO: Content will be added here.",
   className,
 }: PlaceholderCardProps) {
   return (
@@ -27,7 +27,6 @@ export function PlaceholderCard({
     </div>
   );
 }
-
 
 
 

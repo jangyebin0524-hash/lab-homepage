@@ -13,10 +13,10 @@ export function Publications() {
     <div className="space-y-4">
       <SectionPlaceholder
         title="Journal papers"
-        description="Peer-reviewed work that reflects the lab's long-form research contributions."
+        description="TODO: Content will be added here."
         isEmpty={journalPapers.length === 0}
         emptyTitle="Journal papers"
-        emptyDescription="Add recent journal publications to feature archival work."
+        emptyDescription="TODO: Content will be added here."
         contentClassName="grid gap-4 lg:grid-cols-2"
       >
         {journalPapers.map((publication) => (
@@ -32,10 +32,10 @@ export function Publications() {
 
       <SectionPlaceholder
         title="Conference papers"
-        description="Selected conference publications that highlight recent and upcoming work."
+        description="TODO: Content will be added here."
         isEmpty={conferencePapers.length === 0}
         emptyTitle="Conference papers"
-        emptyDescription="Add conference presentations or proceedings to highlight current research."
+        emptyDescription="TODO: Content will be added here."
         contentClassName="space-y-3"
       >
         {conferencePapers.map((publication) => (
@@ -52,16 +52,16 @@ export function Publications() {
       <div className="grid gap-4 lg:grid-cols-2">
         <SectionPlaceholder
           title="Year filter"
-          description="Use this space to group or browse publications by publication year."
+          description="TODO: Content will be added here."
           emptyTitle="Year filter"
-          emptyDescription="Add a filter or timeline component once the publication list grows."
+          emptyDescription="TODO: Content will be added here."
         />
         <SectionPlaceholder
           title="Paper links"
-          description="Direct links for the papers and supplementary resources featured here."
+          description="TODO: Content will be added here."
           isEmpty={papersWithLinks.length === 0}
           emptyTitle="Paper links"
-          emptyDescription="Add links to PDF previews, slides, or related resources."
+          emptyDescription="TODO: Content will be added here."
           contentClassName="space-y-3"
         >
           {papersWithLinks.map((publication) => (
@@ -78,5 +78,6 @@ export function Publications() {
     </div>
   );
 }
+
 
 

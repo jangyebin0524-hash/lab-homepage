@@ -64,7 +64,7 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
         </nav>
         <div className="border-t border-slate-200 p-4">
           <div className="rounded-md bg-slate-50 p-3 text-xs leading-5 text-slate-500">
-            Researching humane, multimodal AI for everyday collaboration.
+            TODO: Content will be added here.
           </div>
         </div>
       </aside>
@@ -149,7 +149,7 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
             </nav>
             <div className="border-t border-slate-200 p-4">
               <div className="rounded-md bg-slate-50 p-3 text-xs leading-5 text-slate-500">
-                Researching humane, multimodal AI for everyday collaboration.
+                TODO: Content will be added here.
               </div>
             </div>
           </aside>
@@ -160,14 +160,14 @@ export function Sidebar({ activePage, onNavigate }: SidebarProps) {
 }
 
 function SidebarHeader({ compact = false }: { compact?: boolean }) {
-  const title = siteInfo.labName || "Media Lab";
-  const subtitle = siteInfo.affiliation || "Research Group";
+  const title = siteInfo.labName || "Lab Name Placeholder";
+  const subtitle = siteInfo.affiliation || "TODO: Content will be added here.";
 
   return (
     <div className={cn("border-b border-slate-200 px-5 py-5", compact && "border-b-0 p-0")}>
       <div className="flex items-center gap-3">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-slate-200 bg-blue-900 text-[10px] font-semibold text-white">
-          MI
+          TODO
         </div>
         <div className="min-w-0">
           <p className="truncate text-sm font-semibold text-slate-950">{title}</p>
@@ -177,7 +177,6 @@ function SidebarHeader({ compact = false }: { compact?: boolean }) {
     </div>
   );
 }
-
 
 
 
