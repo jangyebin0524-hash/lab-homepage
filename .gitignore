@@ -1,5 +1,16 @@
-node_modules/
-dist/
+node_modules
+dist
+.pnpm-store
+.DS_Store
+*.local
 *.tsbuildinfo
 vite.config.js
 vite.config.d.ts
+
+# Local/generated preview artifacts
+lab-homepage-preview.html
+createSuper.js (1).map
+
+# Finder-created duplicate source copies
+* 2.tsx
+* 2.ts

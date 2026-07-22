@@ -1,11 +1,3 @@
-import type { Collaboration, FundingInfo, Project, TimelineItem } from "@/types/content";
+import type { Project } from '../types/content'
 
-export const projects: Project[] = [];
-
-export const collaborations: Collaboration[] = [];
-
-export const projectOutputs: Collaboration[] = [];
-
-export const fundingInformation: FundingInfo[] = [];
-
-export const projectTimeline: TimelineItem[] = [];
+export const projects: Project[] = []

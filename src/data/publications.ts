@@ -1,3 +1,3 @@
-import type { Publication } from "@/types/content";
+import type { Publication } from '../types/content'
 
-export const publications: Publication[] = [];
+export const publications: Publication[] = []

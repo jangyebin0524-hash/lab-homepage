@@ -1,62 +1,57 @@
-﻿import { useEffect, useState } from "react";
-
-import { Layout } from "@/components/Layout";
-import type { PageKey } from "@/data/navigation";
-import { About } from "@/pages/About";
-import { Contact } from "@/pages/Contact";
-import { Home } from "@/pages/Home";
-import { JoinUs } from "@/pages/JoinUs";
-import { News } from "@/pages/News";
-import { People } from "@/pages/People";
-import { Projects } from "@/pages/Projects";
-import { Publications } from "@/pages/Publications";
-import { Research } from "@/pages/Research";
-import { Resources } from "@/pages/Resources";
-
-const pageComponents: Record<PageKey, React.ComponentType> = {
-  home: Home,
-  about: About,
-  research: Research,
-  people: People,
-  publications: Publications,
-  projects: Projects,
-  news: News,
-  "join-us": JoinUs,
-  contact: Contact,
-  resources: Resources,
-};
-
-function getPageFromHash(): PageKey {
-  if (typeof window === "undefined") {
-    return "home";
-  }
-
-  const hash = window.location.hash.replace("#", "");
-  return hash in pageComponents ? (hash as PageKey) : "home";
-}
+import { Layout } from './components/Layout'
+import { SectionTabs } from './components/SectionTabs'
+import { useActiveSection } from './hooks/useActiveSection'
+import { AboutSection } from './sections/AboutSection'
+import { ContactSection } from './sections/ContactSection'
+import { GallerySection } from './sections/GallerySection'
+import { HomeSection } from './sections/HomeSection'
+import { JoinUsSection } from './sections/JoinUsSection'
+import { NewsSection } from './sections/NewsSection'
+import { PeopleSection } from './sections/PeopleSection'
+import { ProjectsSection } from './sections/ProjectsSection'
+import { PublicationsSection } from './sections/PublicationsSection'
+import { ResearchSection } from './sections/ResearchSection'
+import { ResourcesSection } from './sections/ResourcesSection'
 
 export default function App() {
-  const [activePage, setActivePage] = useState<PageKey>(getPageFromHash);
-  const ActivePage = pageComponents[activePage];
+  const { activeSection, selectSection } = useActiveSection()
 
-  useEffect(() => {
-    const handleHashChange = () => {
-      setActivePage(getPageFromHash());
-    };
-
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []);
-
-  const handleNavigate = (page: PageKey) => {
-    setActivePage(page);
-    window.history.pushState(null, "", `#${page}`);
-  };
+  const activeContent = (() => {
+    switch (activeSection) {
+      case 'home':
+        return <HomeSection onNavigate={selectSection} />
+      case 'about':
+        return <AboutSection />
+      case 'research':
+        return <ResearchSection />
+      case 'people':
+        return <PeopleSection />
+      case 'publications':
+        return <PublicationsSection />
+      case 'projects':
+        return <ProjectsSection />
+      case 'news':
+        return <NewsSection />
+      case 'gallery':
+        return <GallerySection />
+      case 'join-us':
+        return <JoinUsSection onContact={() => selectSection('contact')} />
+      case 'contact':
+        return <ContactSection />
+      case 'resources':
+        return <ResourcesSection />
+    }
+  })()
 
   return (
-    <Layout activePage={activePage} onNavigate={handleNavigate}>
-      <ActivePage />
+    <Layout onNavigate={selectSection}>
+      <SectionTabs activeSection={activeSection} onSelect={selectSection} />
+      <div key={activeSection} role="tabpanel" aria-labelledby={`${activeSection}-tab`}>
+        {activeContent}
+      </div>
+      <footer className="border-t border-[#E2E2E2] bg-[#F7F7F7] px-4 py-8 text-center text-xs text-[#666666] sm:px-6 md:px-8">
+        <p>Lab Name Placeholder · Content will be added here.</p>
+      </footer>
     </Layout>
-  );
+  )
 }
-

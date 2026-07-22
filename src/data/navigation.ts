@@ -1,45 +1,23 @@
-﻿import {
-  BriefcaseBusiness,
-  Contact,
-  Database,
-  FileText,
-  Home,
-  Info,
-  Microscope,
-  Newspaper,
-  UserPlus,
-  Users,
-  type LucideIcon,
-} from "lucide-react";
+import type { SectionId } from '../types/content'
 
-export type PageKey =
-  | "home"
-  | "about"
-  | "research"
-  | "people"
-  | "publications"
-  | "projects"
-  | "news"
-  | "join-us"
-  | "contact"
-  | "resources";
+export interface NavigationItem {
+  index: string
+  label: string
+  id: SectionId
+}
 
-export type NavigationItem = {
-  key: PageKey;
-  label: string;
-  icon: LucideIcon;
-};
+export const navigation: NavigationItem[] = [
+  { index: '01', label: 'Home', id: 'home' },
+  { index: '02', label: 'About', id: 'about' },
+  { index: '03', label: 'Research', id: 'research' },
+  { index: '04', label: 'People', id: 'people' },
+  { index: '05', label: 'Publications', id: 'publications' },
+  { index: '06', label: 'Projects', id: 'projects' },
+  { index: '07', label: 'News', id: 'news' },
+  { index: '08', label: 'Gallery', id: 'gallery' },
+  { index: '09', label: 'Join Us', id: 'join-us' },
+  { index: '10', label: 'Contact', id: 'contact' },
+  { index: '11', label: 'Resources', id: 'resources' },
+]
 
-export const navigationItems: NavigationItem[] = [
-  { key: "home", label: "Home", icon: Home },
-  { key: "about", label: "About", icon: Info },
-  { key: "research", label: "Research", icon: Microscope },
-  { key: "people", label: "People", icon: Users },
-  { key: "publications", label: "Publications", icon: FileText },
-  { key: "projects", label: "Projects", icon: BriefcaseBusiness },
-  { key: "news", label: "News", icon: Newspaper },
-  { key: "join-us", label: "Join Us", icon: UserPlus },
-  { key: "contact", label: "Contact", icon: Contact },
-  { key: "resources", label: "Resources", icon: Database },
-];
-
+export const sectionIds = navigation.map((item) => item.id)

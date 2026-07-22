@@ -1,5 +1,8 @@
-import type { FaqItem, JoinOpening } from "@/types/content";
+import type { JoinInfo } from '../types/content'
 
-export const joinOpenings: JoinOpening[] = [];
-
-export const joinFaqs: FaqItem[] = [];
+export const joinInfo: JoinInfo = {
+  target: '',
+  field: '',
+  applicationMethod: '',
+  faq: '',
+}

@@ -1,32 +1,35 @@
-﻿import { CircleDashed } from "lucide-react";
+import type { LucideIcon } from 'lucide-react'
+import { cn } from '../lib/utils'
 
-import { cn } from "@/lib/utils";
-
-type PlaceholderCardProps = {
-  title?: string;
-  description?: string;
-  className?: string;
-};
-
-export function PlaceholderCard({
-  title = "TODO / Placeholder",
-  description = "TODO: Content will be added here.",
-  className,
-}: PlaceholderCardProps) {
-  return (
-    <div
-      className={cn(
-        "relative flex min-h-32 flex-col justify-center overflow-hidden rounded-md border border-dashed border-slate-200 bg-slate-50/80 px-4 py-8 text-center shadow-[inset_0_1px_0_rgba(255,255,255,0.75)] transition-colors hover:bg-white",
-        "before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-gradient-to-r before:from-transparent before:via-slate-200 before:to-transparent",
-        className,
-      )}
-    >
-      <CircleDashed className="mx-auto mb-3 h-5 w-5 text-slate-500" aria-hidden="true" />
-      <p className="text-sm font-semibold text-slate-700">{title}</p>
-      <p className="mx-auto mt-1 max-w-md text-sm leading-6 text-slate-500">{description}</p>
-    </div>
-  );
+interface PlaceholderCardProps {
+  icon: LucideIcon
+  title: string
+  description?: string
+  className?: string
+  eyebrow?: string
 }
 
-
-
+export function PlaceholderCard({
+  icon: Icon,
+  title,
+  description = '추후 내용이 추가될 예정입니다.',
+  className,
+  eyebrow = 'TODO',
+}: PlaceholderCardProps) {
+  return (
+    <article className={cn('interactive-card rounded-2xl border border-[#E2E2E2] bg-white p-6 shadow-sm', className)}>
+      <div className="flex items-start justify-between gap-4">
+        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl border border-[#E2E2E2] bg-[#F2F2F2] text-[#333333]">
+          <Icon size={17} aria-hidden="true" />
+        </span>
+        <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#8A8A8A]">
+          Placeholder
+        </span>
+      </div>
+      <div className="my-5 h-px bg-[#E2E2E2]" />
+      <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#333333]">{eyebrow}</p>
+      <h3 className="mt-2 text-lg font-semibold text-[#222222]">{title}</h3>
+      <p className="mt-3 text-sm leading-7 text-[#666666]">{description}</p>
+    </article>
+  )
+}

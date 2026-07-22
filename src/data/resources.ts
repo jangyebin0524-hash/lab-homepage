@@ -1,3 +1,3 @@
-import type { ResourceItem } from "@/types/content";
+import type { Resource } from '../types/content'
 
-export const resources: ResourceItem[] = [];
+export const resources: Resource[] = []
