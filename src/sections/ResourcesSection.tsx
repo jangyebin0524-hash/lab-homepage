@@ -21,7 +21,7 @@ export function ResourcesSection() {
           </AnimatedSection>
         ))}
       </div>
-      <p className="mt-6 text-right font-mono text-[10px] uppercase tracking-[0.12em] text-[#8A8A8A]">Resource records Placeholder</p>
+      <p className="mt-6 text-right font-mono text-[10px] uppercase tracking-[0.12em] text-[#94A3B8]">Resource records Placeholder</p>
     </SectionWrapper>
   )
 }

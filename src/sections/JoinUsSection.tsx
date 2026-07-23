@@ -11,15 +11,15 @@ interface JoinUsSectionProps {
 export function JoinUsSection({ onContact }: JoinUsSectionProps) {
   return (
     <SectionWrapper id="join-us" index="09" title="Join Us" eyebrow="Recruit" tone="join">
-      <div className="mb-9 flex flex-col justify-between gap-6 border-y border-[#DADADA] py-7 sm:flex-row sm:items-center">
+      <div className="mb-9 flex flex-col justify-between gap-6 border-y border-[#CBD5E1] py-7 sm:flex-row sm:items-center">
         <div>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#333333]">Recruitment Notice</p>
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-[#666666]">모집 여부와 세부 일정은 정해지지 않았으며, 안내 내용은 추후 업데이트 예정입니다.</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6F93A6]">Recruitment Notice</p>
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-[#64748B]">모집 여부와 세부 일정은 정해지지 않았으며, 안내 내용은 추후 업데이트 예정입니다.</p>
         </div>
         <button
           type="button"
           onClick={onContact}
-          className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#333333] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#333333] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#333333] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F7F7]"
+          className="inline-flex shrink-0 items-center justify-center gap-3 rounded-full bg-[#0F3A5C] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#102F4C] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6F93A6] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
         >
           Contact <ArrowRight size={16} aria-hidden="true" />
         </button>

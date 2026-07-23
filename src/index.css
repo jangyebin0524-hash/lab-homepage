@@ -4,8 +4,8 @@
 
 :root {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #222222;
-  background: #F7F7F7;
+  color: #1F2937;
+  background: #F4F7FA;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -19,7 +19,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  background: #F7F7F7;
+  background: #F4F7FA;
 }
 
 button,
@@ -28,12 +28,13 @@ a {
 }
 
 .medical-home-band {
-  background: #F7F7F7;
+  background:
+    linear-gradient(180deg, #F4F7FA 0%, #FFFFFF 56%, #F8FAFC 100%);
 }
 
 .subtle-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #DADADA transparent;
+  scrollbar-color: #CBD5E1 transparent;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -49,16 +50,16 @@ a {
 .subtle-scrollbar::-webkit-scrollbar-thumb {
   border: 2px solid transparent;
   border-radius: 999px;
-  background-color: #DADADA;
+  background-color: #CBD5E1;
   background-clip: padding-box;
 }
 
 .subtle-scrollbar::-webkit-scrollbar-thumb:hover {
-  background-color: #CFCFCF;
+  background-color: #9DB9C8;
 }
 
 .subtle-scrollbar:focus-visible {
-  outline: 2px solid #333333;
+  outline: 2px solid #6F93A6;
   outline-offset: 3px;
 }
 
@@ -71,27 +72,34 @@ a {
   height: 0.45rem;
   width: 0.45rem;
   border-radius: 999px;
-  background: rgb(51 51 51 / 0.28);
-  box-shadow: 0 0 0 8px rgb(238 238 238 / 0.48);
+  background: rgb(111 147 166 / 0.38);
+  box-shadow: 0 0 0 8px rgb(234 243 248 / 0.72);
 }
 
 .connection-line {
   position: absolute;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgb(51 51 51 / 0.24), transparent);
+  background: linear-gradient(90deg, transparent, rgb(157 185 200 / 0.48), transparent);
 }
 
 .technical-grid {
   background-image:
-    linear-gradient(rgb(218 218 218 / 0.36) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(218 218 218 / 0.36) 1px, transparent 1px);
+    linear-gradient(rgb(157 185 200 / 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(157 185 200 / 0.22) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
 .imaging-grid {
   background-image:
-    radial-gradient(circle at 1px 1px, rgb(51 51 51 / 0.18) 1px, transparent 0);
+    radial-gradient(circle at 1px 1px, rgb(15 58 92 / 0.12) 1px, transparent 0);
   background-size: 18px 18px;
+}
+
+.medical-signal-line {
+  background:
+    linear-gradient(90deg, transparent 0 6%, rgb(157 185 200 / 0.3) 6% 12%, transparent 12% 18%),
+    linear-gradient(90deg, rgb(15 58 92 / 0.16), rgb(111 147 166 / 0.2));
+  clip-path: polygon(0 58%, 10% 58%, 14% 38%, 18% 76%, 23% 58%, 42% 58%, 46% 28%, 50% 82%, 55% 58%, 73% 58%, 77% 42%, 82% 70%, 87% 58%, 100% 58%);
 }
 
 .section-reveal {
@@ -143,8 +151,8 @@ a {
 
   .interactive-card:hover {
     transform: translateY(-2px);
-    border-color: #CFCFCF;
-    box-shadow: 0 14px 34px rgb(34 34 34 / 0.1);
+    border-color: #CBD5E1;
+    box-shadow: 0 16px 36px rgb(15 58 92 / 0.1);
   }
 }
 

@@ -1,5 +1,4 @@
 import { Layout } from './components/Layout'
-import { SectionTabs } from './components/SectionTabs'
 import { useActiveSection } from './hooks/useActiveSection'
 import { AboutSection } from './sections/AboutSection'
 import { ContactSection } from './sections/ContactSection'
@@ -44,13 +43,13 @@ export default function App() {
   })()
 
   return (
-    <Layout onNavigate={selectSection}>
-      <SectionTabs activeSection={activeSection} onSelect={selectSection} />
-      <div key={activeSection} role="tabpanel" aria-labelledby={`${activeSection}-tab`}>
+    <Layout activeSection={activeSection} onNavigate={selectSection}>
+      <div key={activeSection} role="tabpanel" aria-label={`${activeSection} section content`}>
         {activeContent}
       </div>
-      <footer className="border-t border-[#E2E2E2] bg-[#F7F7F7] px-4 py-8 text-center text-xs text-[#666666] sm:px-6 md:px-8">
-        <p>Lab Name Placeholder · Content will be added here.</p>
+      <footer className="border-t border-[#CBD5E1] bg-[#F4F7FA] px-4 py-8 text-center text-xs text-[#64748B] sm:px-6 md:px-8">
+        <p>Lab Name Placeholder · Department Placeholder · University Placeholder</p>
+        <p className="mt-2 text-[#94A3B8]">Privacy Placeholder · Terms Placeholder</p>
       </footer>
     </Layout>
   )

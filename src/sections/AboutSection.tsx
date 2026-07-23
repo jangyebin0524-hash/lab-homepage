@@ -12,15 +12,15 @@ export function AboutSection() {
   return (
     <SectionWrapper id="about" index="02" title="About" eyebrow="Outline">
       <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
-        <div className="border-t border-[#DADADA]">
+        <div className="border-t border-[#CBD5E1]">
           {outlineItems.map((item) => (
             <AnimatedSection key={item.number}>
-              <article className="border-b border-[#E2E2E2] py-7">
+              <article className="border-b border-[#E2E8F0] py-7">
                 <div className="flex gap-5">
-                  <span className="font-mono text-xs text-[#333333]">{item.number}</span>
+                  <span className="font-mono text-xs text-[#0F3A5C]">{item.number}</span>
                   <div>
-                    <h3 className="text-xl font-semibold text-[#222222]">{item.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-[#666666]">{item.description}</p>
+                    <h3 className="text-xl font-semibold text-[#1F2937]">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-[#64748B]">{item.description}</p>
                   </div>
                 </div>
               </article>

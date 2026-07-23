@@ -23,11 +23,11 @@ export function SectionTabs({ activeSection, onSelect }: SectionTabsProps) {
   }, [activeSection])
 
   return (
-    <div className="border-b border-[#E2E2E2] bg-[#F2F2F2]/80">
+    <div className="border-b border-[#E2E8F0] bg-[#F8FAFC]/80">
       <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 md:px-8">
         <div className="mb-3 flex items-center justify-between gap-4">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#666666]">Sections</p>
-          <span className="hidden text-[10px] font-semibold uppercase tracking-[0.12em] text-[#8A8A8A] sm:block">Swipe to explore</span>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#64748B]">Sections</p>
+          <span className="hidden text-[10px] font-semibold uppercase tracking-[0.12em] text-[#94A3B8] sm:block">Swipe to explore</span>
         </div>
         <nav
           className="subtle-scrollbar max-w-full touch-pan-x overflow-x-auto overflow-y-hidden overscroll-x-contain pb-2"
@@ -48,10 +48,10 @@ export function SectionTabs({ activeSection, onSelect }: SectionTabsProps) {
                   aria-selected={active}
                   onClick={() => onSelect(id)}
                   className={cn(
-                    'shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#333333] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F7F7F7]',
+                    'shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6F93A6] focus-visible:ring-offset-2 focus-visible:ring-offset-white',
                     active
-                      ? 'border-[#333333] bg-[#333333] text-white shadow-sm'
-                      : 'border-[#E2E2E2] bg-white text-[#666666] hover:bg-[#EEEEEE] hover:text-[#222222]',
+                      ? 'border-[#0F3A5C] bg-[#0F3A5C] text-white shadow-sm'
+                      : 'border-[#E2E8F0] bg-white text-[#64748B] hover:bg-[#EAF3F8] hover:text-[#1F2937]',
                   )}
                 >
                   {label}
