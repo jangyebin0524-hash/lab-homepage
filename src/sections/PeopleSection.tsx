@@ -37,19 +37,18 @@ function ProfilePlaceholder() {
 
 export function PeopleSection() {
   return (
-    <SectionWrapper id="people" index="04" title="People" eyebrow="Research Team">
-      <div className="rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 shadow-sm sm:p-7">
+    <SectionWrapper id="people" index="04" title="People" eyebrow="Research team">
+      <div className="rounded-2xl border border-[#E2E8F0] bg-[#F8FAFC] p-5 sm:p-7">
         <div className="mb-6 flex items-center justify-between gap-4">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6F93A6]">Professor</p>
+            <p className="text-xs font-medium text-[#64748B]">Professor</p>
             <h3 className="mt-2 text-xl font-semibold text-[#1F2937]">Principal Investigator Placeholder</h3>
           </div>
-          <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[#94A3B8]">Profile</span>
         </div>
         <div className="grid gap-5 lg:grid-cols-[260px_1fr]">
           <AnimatedSection className="h-full">
             <div className="flex h-full aspect-[4/5] min-h-72 flex-col items-center justify-center rounded-2xl border border-[#E2E8F0] bg-white text-center">
-              <span className="grid h-20 w-20 place-items-center rounded-2xl bg-[#EAF3F8] text-[#0F3A5C]">
+              <span className="grid h-20 w-20 place-items-center rounded-2xl bg-[#F1F5F9] text-[#475569]">
                 <UserRound size={30} aria-hidden="true" />
               </span>
               <p className="mt-5 text-sm font-semibold text-[#1F2937]">Profile Image Placeholder</p>
@@ -79,8 +78,8 @@ export function PeopleSection() {
             <h3 className="text-xl font-semibold text-[#1F2937]">Member Groups</h3>
             <p className="mt-2 text-xs leading-5 text-[#64748B]">그룹을 좌우로 넘겨 확인할 수 있습니다.</p>
           </div>
-          <span className="inline-flex shrink-0 items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#0F3A5C]" aria-hidden="true">
-            Swipe <span className="h-px w-8 bg-[#6F93A6]" />
+          <span className="inline-flex shrink-0 items-center gap-2 text-xs text-[#64748B]" aria-hidden="true">
+            Swipe <span className="h-px w-8 bg-[#64748B]" />
           </span>
         </div>
         <div
@@ -96,13 +95,12 @@ export function PeopleSection() {
 
               return (
                 <AnimatedSection className="w-[300px] shrink-0 md:w-[380px]" key={group.id}>
-                  <article data-card="member-group" className="interactive-card h-full w-full overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-sm">
+                  <article data-card="member-group" className="surface-card interactive-card h-full w-full overflow-hidden">
                     <header className="flex items-center justify-between gap-4 border-b border-[#E2E8F0] px-5 py-4">
                       <div className="min-w-0">
                         <p className="truncate text-sm font-semibold text-[#1F2937]">{group.label}</p>
-                        <p className="mt-1 font-mono text-[10px] uppercase text-[#94A3B8]">Members Placeholder</p>
+                        <p className="mt-1 text-xs text-[#94A3B8]">Members Placeholder</p>
                       </div>
-                      <span className="rounded-full bg-[#EAF3F8] px-2.5 py-1 font-mono text-[10px] text-[#0F3A5C]">Group</span>
                     </header>
 
                     <div className="space-y-4">

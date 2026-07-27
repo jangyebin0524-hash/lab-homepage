@@ -20,9 +20,9 @@ interface SectionWrapperProps {
 const tones: Record<SectionTone, string> = {
   home: 'medical-home-band',
   white: 'bg-white',
-  soft: 'bg-[#F8FAFC]',
-  muted: 'bg-[#F4F7FA]',
-  join: 'bg-[#F8FAFC]',
+  soft: 'bg-[#F1F5F9]',
+  muted: 'bg-[#F8FAFC]',
+  join: 'bg-[#F1F5F9]',
 }
 
 export function SectionWrapper({
@@ -41,16 +41,16 @@ export function SectionWrapper({
     <section
       id={id}
       aria-labelledby={headingId}
-      className={cn('relative scroll-mt-24 overflow-hidden py-16 sm:py-20 lg:py-24', tones[tone], className)}
+      className={cn('relative scroll-mt-20 overflow-hidden py-16 sm:py-20 lg:py-24', tones[tone], className)}
     >
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
         <AnimatedSection>
-          <header className={hideHeading ? 'sr-only' : 'mb-10 sm:mb-14'}>
-            {!hideHeading && (
-              <div className="mb-4 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#6F93A6]">
+          <header className={hideHeading ? 'sr-only' : 'mb-10 sm:mb-12'}>
+            {!hideHeading && eyebrow && (
+              <div className="mb-4 flex items-center gap-3 text-xs font-medium text-[#64748B]">
                 <span className="font-mono text-[#94A3B8]">{index}</span>
-                <span className="h-px w-10 bg-[#0F3A5C]" />
-                <span>{eyebrow || 'Lab Interface'}</span>
+                <span className="h-px w-8 bg-[#CBD5E1]" />
+                <span>{eyebrow}</span>
               </div>
             )}
             <h2 id={headingId} className="text-3xl font-semibold leading-tight text-[#1F2937] sm:text-4xl">{title}</h2>

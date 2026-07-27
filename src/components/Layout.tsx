@@ -10,7 +10,7 @@ interface LayoutProps {
 
 export function Layout({ children, activeSection, onNavigate }: LayoutProps) {
   return (
-    <div className="min-h-screen bg-[#F4F7FA] text-[#1F2937]">
+    <div className="min-h-screen bg-[#F8FAFC] text-[#1F2937]">
       <Header activeSection={activeSection} onNavigate={onNavigate} />
       <main className="min-w-0">{children}</main>
     </div>

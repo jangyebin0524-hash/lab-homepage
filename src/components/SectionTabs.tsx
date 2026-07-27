@@ -48,10 +48,10 @@ export function SectionTabs({ activeSection, onSelect }: SectionTabsProps) {
                   aria-selected={active}
                   onClick={() => onSelect(id)}
                   className={cn(
-                    'shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6F93A6] focus-visible:ring-offset-2 focus-visible:ring-offset-white',
+                    'shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64748B] focus-visible:ring-offset-2 focus-visible:ring-offset-white',
                     active
-                      ? 'border-[#0F3A5C] bg-[#0F3A5C] text-white shadow-sm'
-                      : 'border-[#E2E8F0] bg-white text-[#64748B] hover:bg-[#EAF3F8] hover:text-[#1F2937]',
+                      ? 'border-[#475569] bg-[#475569] text-white shadow-sm'
+                      : 'border-[#E2E8F0] bg-white text-[#64748B] hover:bg-[#F1F5F9] hover:text-[#1F2937]',
                   )}
                 >
                   {label}

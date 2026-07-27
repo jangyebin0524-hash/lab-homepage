@@ -1,30 +1,29 @@
-import { Cpu, Layers3, LineChart } from 'lucide-react'
 import { AnimatedSection } from '../components/AnimatedSection'
 import { SectionWrapper } from '../components/SectionWrapper'
 
 const projectSlots = [
-  { icon: Cpu, title: 'Project Title Placeholder 01' },
-  { icon: Layers3, title: 'Project Title Placeholder 02' },
-  { icon: LineChart, title: 'Project Title Placeholder 03' },
+  { number: '01', title: 'Project Title Placeholder 01' },
+  { number: '02', title: 'Project Title Placeholder 02' },
+  { number: '03', title: 'Project Title Placeholder 03' },
 ]
 
 export function ProjectsSection() {
   return (
-    <SectionWrapper id="projects" index="06" title="Projects" eyebrow="Projects">
-      <div className="mb-9 max-w-2xl border-l-2 border-[#6F93A6] pl-5">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#6F93A6]">Research Projects Placeholder</p>
-        <p className="text-sm leading-7 text-[#64748B]">연구 과제와 기술 개발 항목이 추후 추가될 예정입니다.</p>
+    <SectionWrapper id="projects" index="06" title="Projects">
+      <div className="mb-10 max-w-2xl">
+        <p className="text-sm font-medium text-[#475569]">Research Projects Placeholder</p>
+        <p className="mt-2 text-sm leading-7 text-[#64748B]">연구 과제와 기술 개발 항목이 추후 추가될 예정입니다.</p>
       </div>
-      <div className="grid gap-5 md:grid-cols-3">
-        {projectSlots.map(({ icon: Icon, title }) => (
-          <AnimatedSection className="h-full" key={title}>
-            <article className="interactive-card h-full rounded-2xl border border-[#E2E8F0] bg-white p-6 shadow-sm">
-              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-[#EAF3F8] text-[#0F3A5C]">
-                <Icon size={19} aria-hidden="true" />
-              </span>
-              <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#6F93A6]">Project Card</p>
-              <h3 className="mt-2 text-lg font-semibold text-[#1F2937]">{title}</h3>
-              <dl className="mt-5 divide-y divide-[#E2E8F0] text-sm">
+      <div className="border-t border-[#CBD5E1]">
+        {projectSlots.map(({ number, title }) => (
+          <AnimatedSection key={title}>
+            <article className="grid gap-6 border-b border-[#E2E8F0] py-8 lg:grid-cols-[80px_0.9fr_1.1fr] lg:gap-10">
+              <span className="font-mono text-xs text-[#94A3B8]">{number}</span>
+              <div>
+                <p className="text-xs text-[#64748B]">Project Placeholder</p>
+                <h3 className="mt-2 text-xl font-semibold text-[#1F2937]">{title}</h3>
+              </div>
+              <dl className="divide-y divide-[#E2E8F0] text-sm">
                 {['Research Goal', 'Technology', 'Result'].map((label) => (
                   <div className="grid grid-cols-[105px_1fr] gap-3 py-3" key={label}>
                     <dt className="text-[#64748B]">{label}</dt>
