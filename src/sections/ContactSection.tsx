@@ -1,11 +1,14 @@
 import { AnimatedSection } from '../components/AnimatedSection'
 import { SectionWrapper } from '../components/SectionWrapper'
 import { contact } from '../data/contact'
+import { professor } from '../data/people'
+import { siteInfo } from '../data/siteInfo'
 
 const contactRows = [
-  { label: 'E-mail', value: contact.email },
-  { label: 'Office', value: contact.location },
-  { label: 'Address', value: '' },
+  { label: 'E-mail', value: professor.email, href: `mailto:${professor.email}` },
+  { label: 'Tel', value: professor.phone, href: `tel:${professor.phone}` },
+  { label: 'Department', value: siteInfo.department.en },
+  { label: 'Affiliation', value: `${siteInfo.college.en}, ${siteInfo.university.en}` },
 ]
 
 export function ContactSection() {
@@ -15,12 +18,23 @@ export function ContactSection() {
         <AnimatedSection className="h-full">
           <div className="h-full py-8 lg:pr-12">
             <p className="text-sm font-medium text-[#64748B]">Contact information</p>
-            <h3 className="mt-2 text-xl font-semibold text-[#1F2937]">Contact information Placeholder</h3>
+            <h3 className="mt-2 text-xl font-semibold text-[#1F2937]">{siteInfo.lab.en}</h3>
             <dl className="mt-7 divide-y divide-[#E2E8F0] border-t border-[#E2E8F0]">
-              {contactRows.map(({ label, value }) => (
-                <div className="grid grid-cols-[90px_1fr] items-center gap-3 py-4 text-sm" key={label}>
+              {contactRows.map(({ label, value, href }) => (
+                <div className="grid grid-cols-[90px_minmax(0,1fr)] items-center gap-3 py-4 text-sm" key={label}>
                   <dt className="text-[#64748B]">{label}</dt>
-                  <dd className="font-medium text-[#1F2937]">{value || 'Placeholder'}</dd>
+                  <dd className="min-w-0 break-words font-medium text-[#1F2937]">
+                    {href ? (
+                      <a
+                        href={href}
+                        className="email-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64748B]"
+                      >
+                        {value}
+                      </a>
+                    ) : (
+                      value
+                    )}
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -30,11 +44,16 @@ export function ContactSection() {
           <div className="flex min-h-72 h-full flex-col justify-between border-t border-[#E2E8F0] py-8 lg:border-l lg:border-t-0 lg:pl-12">
             <div>
               <p className="text-sm font-medium text-[#64748B]">Location</p>
-              <h3 className="mt-2 text-xl font-semibold text-[#1F2937]">Map Placeholder</h3>
-              <p className="mt-3 text-sm leading-7 text-[#64748B]">지도와 방문 안내가 추후 업데이트될 예정입니다.</p>
+              <h3 className="mt-2 text-xl font-semibold text-[#1F2937]">{contact.location}</h3>
             </div>
-            <div className="mt-10 flex min-h-32 items-center justify-center border border-dashed border-[#CBD5E1] bg-[#F8FAFC] text-xs text-[#94A3B8]">
-              Map area Placeholder
+            <div className="relative mt-10 min-h-64 overflow-hidden border border-[#CBD5E1] bg-[#F8FAFC]">
+              <iframe
+                title="Map showing Inje University Seongsan Hall"
+                src={contact.mapUrl}
+                className="min-h-64 w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </div>
         </AnimatedSection>

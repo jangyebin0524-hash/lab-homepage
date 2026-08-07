@@ -13,14 +13,28 @@ export type SectionId =
 
 export interface Person {
   id: string
-  group: 'current-members' | 'graduate-students' | 'undergraduate-researchers' | 'alumni'
-  name: string
-  title: string
-  affiliation: string
+  group: 'undergraduate-researchers'
+  nameKo: string
+  nameEn?: string
+  role: 'Undergraduate Researcher'
+  departmentKo?: string
+  departmentEn?: string
+  email?: string
+  photo?: string
+}
+
+export interface ProfessorProfile {
+  name: {
+    ko: string
+    en: string
+  }
+  role: {
+    ko: string
+    en: string
+  }
   email: string
-  location: string
-  research: string[]
-  links: string[]
+  phone: string
+  office: string
 }
 
 export interface Publication {
@@ -40,6 +54,8 @@ export interface Project {
   title: string
   status: 'ongoing' | 'completed'
   description: string
+  technology: string
+  result: string
   links: string[]
 }
 
@@ -49,6 +65,13 @@ export interface NewsItem {
   category: string
   date: string
   description: string
+  seminarPresentations?: {
+    id: string
+    presenter: string
+    title: string
+    summary: string
+    image: string
+  }[]
 }
 
 export interface GalleryItem {

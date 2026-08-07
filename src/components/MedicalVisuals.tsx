@@ -26,7 +26,7 @@ export function MedicalHeroVisual() {
     <div
       className="relative min-h-[360px] overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-5 sm:min-h-[420px] sm:p-7"
       role="img"
-      aria-label="의료 데이터의 연결을 점과 선으로 표현한 추상 Placeholder 비주얼"
+      aria-label="Abstract placeholder visualization of medical data connections using points and lines"
     >
       <MedicalBackdrop />
       <div className="relative min-h-[318px] sm:min-h-[366px]">
@@ -135,7 +135,7 @@ export function DiagnosticPanel() {
 interface MedicalRecordProps {
   label: string
   title: string
-  fields: { label: string; value?: string }[]
+  fields: { label: string; value?: string; href?: string }[]
   dark?: boolean
 }
 
@@ -146,9 +146,20 @@ export function MedicalRecordCard({ label, title, fields, dark = false }: Medica
       <h3 className={`mt-1 text-base font-semibold ${dark ? 'text-white' : 'text-[#1F2937]'}`}>{title}</h3>
       <dl className="mt-5 divide-y divide-[#E2E8F0]">
         {fields.map((field) => (
-          <div className="grid grid-cols-[110px_1fr] gap-4 py-3 text-xs sm:grid-cols-[140px_1fr]" key={field.label}>
+          <div className="grid grid-cols-[110px_minmax(0,1fr)] gap-4 py-3 text-xs sm:grid-cols-[140px_minmax(0,1fr)]" key={field.label}>
             <dt className={dark ? 'text-[#CBD5E1]' : 'text-[#64748B]'}>{field.label}</dt>
-            <dd className={`font-medium ${dark ? 'text-[#FFFFFF]' : 'text-[#1F2937]'}`}>{field.value || 'Placeholder'}</dd>
+            <dd className={`min-w-0 break-words font-medium leading-5 ${dark ? 'text-[#FFFFFF]' : 'text-[#1F2937]'}`}>
+              {field.href && field.value ? (
+                <a
+                  href={field.href}
+                  className="email-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64748B]"
+                >
+                  {field.value}
+                </a>
+              ) : (
+                field.value || 'Placeholder'
+              )}
+            </dd>
           </div>
         ))}
       </dl>

@@ -1,4 +1,5 @@
 import { Layout } from './components/Layout'
+import { siteInfo } from './data/siteInfo'
 import { useActiveSection } from './hooks/useActiveSection'
 import { AboutSection } from './sections/AboutSection'
 import { ContactSection } from './sections/ContactSection'
@@ -48,7 +49,7 @@ export default function App() {
         {activeContent}
       </div>
       <footer className="border-t border-[#E2E8F0] bg-[#F8FAFC] px-4 py-8 text-center text-xs text-[#64748B] sm:px-6 md:px-8">
-        <p>Lab Name Placeholder · Department Placeholder · University Placeholder</p>
+        <p>{siteInfo.lab.en} · {siteInfo.university.en}</p>
         <p className="mt-2 text-[#94A3B8]">Contact information and copyright notice will be added here.</p>
       </footer>
     </Layout>

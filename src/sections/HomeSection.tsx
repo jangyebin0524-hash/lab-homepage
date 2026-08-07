@@ -1,59 +1,73 @@
 import type { SectionId } from '../types/content'
-import { MedicalDataFlow, MedicalHeroVisual } from '../components/MedicalVisuals'
-import { RecruitmentBanner } from '../components/RecruitmentBanner'
+import { MedicalHeroVisual } from '../components/MedicalVisuals'
 import { SectionWrapper } from '../components/SectionWrapper'
+import { siteInfo } from '../data/siteInfo'
 
 interface HomeSectionProps {
   onNavigate: (id: SectionId) => void
 }
 
-export function HomeSection({ onNavigate }: HomeSectionProps) {
-  const labFields = ['Lab Name', 'Department', 'University', 'Principal Investigator', 'Research Area']
+const researchAreas = [
+  {
+    title: 'Medical Artificial Intelligence',
+    description: 'Developing intelligent methods that support the analysis and interpretation of complex medical information.',
+  },
+  {
+    title: 'Biomedical Data Analytics',
+    description: 'Studying clinical and biomedical data to identify meaningful patterns and improve data-informed healthcare research.',
+  },
+  {
+    title: 'Digital Healthcare Systems',
+    description: 'Designing digital systems and services that support patients, healthcare professionals, and medical organizations.',
+  },
+  {
+    title: 'Biomedical Signal Processing',
+    description: 'Analyzing physiological signals to extract useful information for health monitoring and clinical decision support.',
+  },
+]
 
+export function HomeSection({ onNavigate }: HomeSectionProps) {
   return (
     <SectionWrapper id="home" index="01" title="Home" tone="home" hideHeading className="min-h-[calc(100vh-4rem)]">
-      <RecruitmentBanner onNavigate={() => onNavigate('join-us')} />
-
-      <div className="mt-12 grid items-center gap-10 lg:grid-cols-[0.96fr_1.04fr] lg:gap-14">
+      <div className="grid items-center gap-10 lg:grid-cols-[0.96fr_1.04fr] lg:gap-14">
         <div className="home-stagger relative min-w-0 pb-6" style={{ '--delay': '120ms' } as React.CSSProperties}>
-          <div className="relative flex items-center gap-3 text-xs font-medium text-[#64748B]">
-            <span className="h-px w-12 bg-[#CBD5E1]" /> Medical IT · AI Research Lab
+          <div className="relative flex items-start gap-3 text-[10px] font-medium uppercase leading-5 tracking-[0.08em] text-[#64748B] sm:text-xs">
+            <span className="mt-2.5 h-px w-12 shrink-0 bg-[#CBD5E1]" aria-hidden="true" />
+            <div className="min-w-0">
+              <p>{siteInfo.university.en}</p>
+              <p className="mt-0.5 break-normal">
+                {siteInfo.college.en} · {siteInfo.department.en}
+              </p>
+            </div>
           </div>
-          <h1 className="relative mt-7 max-w-4xl break-words text-5xl font-semibold leading-[1.08] tracking-[-0.025em] text-[#1F2937] sm:text-6xl">
-            Lab Name Placeholder
+          <p className="mt-6 text-sm font-semibold text-[#475569]">{siteInfo.lab.en}</p>
+          <h1 className="relative mt-4 max-w-[15ch] break-normal text-4xl font-semibold leading-[1.1] tracking-[-0.025em] text-[#1F2937] sm:text-5xl lg:text-6xl">
+            Advancing Healthcare through Data and Intelligent Systems
           </h1>
-          <p className="mt-4 text-sm text-[#64748B]">
-            Department Placeholder · University Placeholder
+          <p className="relative mt-6 max-w-xl text-base leading-8 text-[#64748B] sm:text-lg">
+            We explore how medical data, artificial intelligence, and digital technologies can support more reliable, accessible, and human-centered healthcare.
           </p>
-          <p className="mt-6 max-w-full break-words text-lg font-medium leading-8 text-[#475569] sm:max-w-2xl sm:text-2xl">
-            Hero Title Placeholder
-          </p>
-          <p className="relative mt-5 max-w-2xl text-base leading-8 text-[#64748B] sm:text-lg">
-            의료 AI 및 의료 IT 연구 소개 문구가 추후 추가될 예정입니다.
-          </p>
-          <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-[#64748B]">
-            {['Research Keyword Placeholder 01', 'Research Keyword Placeholder 02', 'Research Keyword Placeholder 03'].map((keyword, index) => (
-              <li className="flex items-center gap-2" key={keyword}>
-                <span className="font-mono text-[10px] text-[#94A3B8]">0{index + 1}</span>
-                <span>{keyword}</span>
-              </li>
-            ))}
-          </ul>
           <div className="relative mt-9 flex flex-wrap gap-3">
-            <button
-              type="button"
-              onClick={() => onNavigate('research')}
+            <a
+              href="#research"
+              onClick={(event) => {
+                event.preventDefault()
+                onNavigate('research')
+              }}
               className="rounded-xl bg-[#475569] px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#334155] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64748B] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
-              Research Placeholder
-            </button>
-            <button
-              type="button"
-              onClick={() => onNavigate('contact')}
+              Explore Our Research
+            </a>
+            <a
+              href="#people"
+              onClick={(event) => {
+                event.preventDefault()
+                onNavigate('people')
+              }}
               className="rounded-xl border border-[#CBD5E1] bg-white px-5 py-3 text-sm font-semibold text-[#475569] transition-colors hover:bg-[#F1F5F9] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64748B] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
-              Contact Placeholder
-            </button>
+              Meet Our Team
+            </a>
           </div>
         </div>
 
@@ -62,35 +76,57 @@ export function HomeSection({ onNavigate }: HomeSectionProps) {
         </div>
       </div>
 
-      <div className="home-stagger mt-16 grid border-y border-[#CBD5E1] lg:grid-cols-[1.08fr_0.92fr]" style={{ '--delay': '320ms' } as React.CSSProperties}>
-        <article className="flex flex-col justify-between py-8 pr-0 lg:border-r lg:border-[#E2E8F0] lg:pr-12">
-          <div>
-            <p className="text-xs font-medium text-[#64748B]">Mission Placeholder</p>
-            <p className="mt-6 max-w-xl text-2xl font-medium leading-snug text-[#1F2937] sm:text-3xl">Research mission will be added here.</p>
-          </div>
-          <p className="mt-10 max-w-xl text-sm leading-7 text-[#64748B]">연구실의 목표와 방향성이 추후 추가될 예정입니다.</p>
-        </article>
-        <div className="border-t border-[#E2E8F0] py-8 lg:border-l-0 lg:border-t-0 lg:pl-12">
-          <p className="text-xs font-medium text-[#64748B]">Lab information</p>
-          <h2 className="mt-2 text-lg font-semibold text-[#1F2937]">Profile Placeholder</h2>
-          <dl className="mt-5 divide-y divide-[#E2E8F0]">
-            {labFields.map((label) => (
-              <div className="grid grid-cols-[120px_1fr] gap-4 py-3 text-sm" key={label}>
-                <dt className="text-[#64748B]">{label}</dt>
-                <dd className="font-medium text-[#1F2937]">Placeholder</dd>
-              </div>
-            ))}
-          </dl>
+      <section className="home-stagger mt-16 border-y border-[#CBD5E1] py-10 sm:py-12" style={{ '--delay': '320ms' } as React.CSSProperties} aria-labelledby="home-research-focus">
+        <div className="max-w-3xl">
+          <h2 id="home-research-focus" className="text-3xl font-semibold tracking-[-0.02em] text-[#1F2937] sm:text-4xl">
+            Research Focus
+          </h2>
+          <p className="mt-4 max-w-2xl text-base leading-8 text-[#64748B]">
+            Our research connects healthcare needs with data-driven and intelligent technologies to develop practical solutions for medical environments.
+          </p>
         </div>
-      </div>
 
-      <div className="home-stagger mt-8" style={{ '--delay': '420ms' } as React.CSSProperties}>
-        <MedicalDataFlow />
-      </div>
+        <div className="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
+          {researchAreas.map((area, index) => (
+            <article className="border-t border-[#E2E8F0] pt-5" key={area.title}>
+              <div className="flex items-start gap-4">
+                <span className="mt-1 shrink-0 font-mono text-xs text-[#94A3B8]">0{index + 1}</span>
+                <div>
+                  <h3 className="text-lg font-semibold text-[#1F2937]">{area.title}</h3>
+                  <p className="mt-3 max-w-xl text-sm leading-7 text-[#64748B]">{area.description}</p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-      <div className="home-stagger mt-8 text-xs text-[#94A3B8]" style={{ '--delay': '520ms' } as React.CSSProperties}>
-        Content status · Placeholder
-      </div>
+      <section className="home-stagger mt-16 grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16" style={{ '--delay': '420ms' } as React.CSSProperties} aria-labelledby="home-introduction">
+        <div>
+          <p className="text-xs font-medium text-[#64748B]">Introduction</p>
+          <h2 id="home-introduction" className="mt-3 max-w-md text-3xl font-semibold leading-tight tracking-[-0.02em] text-[#1F2937] sm:text-4xl">
+            Research with Clinical Relevance
+          </h2>
+        </div>
+        <div className="max-w-2xl border-t border-[#CBD5E1] pt-6">
+          <p className="text-base leading-8 text-[#475569]">
+            We aim to bridge technology and healthcare by conducting research that is technically rigorous, clinically meaningful, and applicable to real-world medical challenges.
+          </p>
+          <p className="mt-5 text-base leading-8 text-[#64748B]">
+            Our work brings together perspectives from healthcare, data science, artificial intelligence, and information systems.
+          </p>
+          <a
+            href="#about"
+            onClick={(event) => {
+              event.preventDefault()
+              onNavigate('about')
+            }}
+            className="mt-7 inline-flex border-b border-[#94A3B8] pb-1 text-sm font-semibold text-[#475569] transition-colors hover:border-[#475569] hover:text-[#1F2937] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64748B] focus-visible:ring-offset-4"
+          >
+            About the Lab
+          </a>
+        </div>
+      </section>
     </SectionWrapper>
   )
 }

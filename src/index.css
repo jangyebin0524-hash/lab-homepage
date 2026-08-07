@@ -6,6 +6,51 @@
   .surface-card {
     @apply rounded-2xl border border-slate-200 bg-white;
   }
+
+  .email-link {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    margin: -0.25rem -0.5rem;
+    padding: 0.25rem 0.5rem;
+    overflow-wrap: anywhere;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition:
+      color 200ms ease,
+      background-color 200ms ease,
+      transform 200ms ease;
+  }
+
+  .email-link::after {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.15rem;
+    left: 0.5rem;
+    height: 1px;
+    content: '';
+    background: #64748B;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:
+      opacity 200ms ease,
+      transform 200ms ease;
+  }
+
+  .email-link:hover,
+  .email-link:focus-visible {
+    color: #1F2937;
+    background: #F1F5F9;
+    transform: translateY(-2px);
+  }
+
+  .email-link:hover::after,
+  .email-link:focus-visible::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
 }
 
 :root {
