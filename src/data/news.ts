@@ -2,6 +2,14 @@ import type { NewsItem } from '../types/content'
 
 export const newsItems: NewsItem[] = [
   {
+    id: 'aann-2026-qadc-paper-accepted',
+    title: 'Paper accepted at AANN 2026',
+    category: 'Paper Accepted',
+    date: '2026-08-07',
+    description:
+      '“Query-Aware Adaptive Document Compression for Efficient RAG Context Allocation” was accepted for AANN 2026 and invited for an oral report.',
+  },
+  {
     id: 'lab-seminar-2026-07-30',
     title: '2026/07/30 LAB Seminar',
     category: 'Seminar',
@@ -60,6 +68,30 @@ export const newsItems: NewsItem[] = [
       '“Source-Level Detection of Private Data Collection Misuse and Build-Preserving Mitigation of Write-Transaction Return Leakage in LLM-Generated Hyperledger Fabric Chaincode” was published in the ACM ICPS proceedings.',
   },
   {
+    id: 'iait-2026-evidence-retention-published',
+    title: 'Paper published in the IAIT 2026 proceedings',
+    category: 'Publication',
+    date: '2026-06-17',
+    description:
+      '“Evidence Retention Is Not Sufficient for Answerability: A Diagnostic Study of Context Budgeting for Small Language Model RAG” was published in the ACM International Conference Proceedings.',
+  },
+  {
+    id: 'kiiect-2026-prompt-compression-published',
+    title: 'Paper published in the KIIECT 2026 Spring proceedings',
+    category: 'Publication',
+    date: '2026-05-22',
+    description:
+      '“Effects of Prompt Compression on Long-Context Question Answering in Small Language Models” was published in the KIIECT 2026 Spring Conference Proceedings and presented orally.',
+  },
+  {
+    id: 'iciit-2026-ltm-presented',
+    title: 'Paper presented at ICIIT 2026',
+    category: 'Conference Presentation',
+    date: '2026-03-05',
+    description:
+      '“Context-Enhanced Long-Term Memory System for Personalized Conversational AI: SALSA Filtering and Hybrid Retrieval Mechanism” was accepted, registered, and listed in the ICIIT 2026 program.',
+  },
+  {
     id: 'kiiect-2026-excellent-paper-award',
     title: '2026 KIIECT Excellent Paper Award',
     category: 'Award',
@@ -74,6 +106,22 @@ export const newsItems: NewsItem[] = [
     date: '2026-02-24',
     description:
       '“Asynchronous Blockchain Recording for Chain-of-Thought Tracing in Small Language Models” was published through IEEE Xplore.',
+  },
+  {
+    id: 'icaiic-2026-external-memory-published',
+    title: 'Paper published at ICAIIC 2026',
+    category: 'Publication',
+    date: '2026-02-24',
+    description:
+      '“Design and Verification of a Query-Aware External Memory Pipeline for Small Language Models” was published in the IEEE conference proceedings.',
+  },
+  {
+    id: 'aicomps-2025-web-search-presented',
+    title: 'Paper presented at AICompS 2025',
+    category: 'Conference Presentation',
+    date: '2025-11-26',
+    description:
+      '“Web-Search-Integrated RAG for Resource-Constrained Environments: A Small-Model Approach” was listed in the official AICompS 2025 program and presented in the Applied AI for Civic & Public Safety session.',
   },
   {
     id: 'kiiect-2025-excellent-paper-award',
