@@ -67,7 +67,7 @@ export interface NewsItem {
   description: string
   seminarPresentations?: {
     id: string
-    presenter: string
+    presenter?: string
     title: string
     summary: string
     image: string
@@ -76,8 +76,11 @@ export interface NewsItem {
 
 export interface GalleryItem {
   id: string
+  date: string
   title: string
   description: string
+  image: string
+  alt: string
 }
 
 export interface Resource {

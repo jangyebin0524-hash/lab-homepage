@@ -1,4 +1,5 @@
 import { Layout } from './components/Layout'
+import { contact } from './data/contact'
 import { siteInfo } from './data/siteInfo'
 import { useActiveSection } from './hooks/useActiveSection'
 import { AboutSection } from './sections/AboutSection'
@@ -50,7 +51,16 @@ export default function App() {
       </div>
       <footer className="border-t border-[#E2E8F0] bg-[#F8FAFC] px-4 py-8 text-center text-xs text-[#64748B] sm:px-6 md:px-8">
         <p>{siteInfo.lab.en} · {siteInfo.university.en}</p>
-        <p className="mt-2 text-[#94A3B8]">Contact information and copyright notice will be added here.</p>
+        <p className="mt-2 text-[#94A3B8]">
+          <a className="email-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64748B]" href={`mailto:${contact.email}`}>
+            {contact.email}
+          </a>
+          <span aria-hidden="true"> · </span>
+          <a className="email-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#64748B]" href={`tel:${contact.phone}`}>
+            Tel. {contact.phone}
+          </a>
+        </p>
+        <p className="mt-2 text-[#94A3B8]">© 2026 {siteInfo.lab.en}. All rights reserved.</p>
       </footer>
     </Layout>
   )

@@ -2,6 +2,49 @@ import type { NewsItem } from '../types/content'
 
 export const newsItems: NewsItem[] = [
   {
+    id: 'lab-seminar-2026-08-13',
+    title: '2026/08/13 LAB Seminar',
+    category: 'Seminar',
+    date: '2026-08-13',
+    description:
+      'Two presentations on medical AI research progress and an OSWorld and VLAA-GUI benchmark review.',
+    seminarPresentations: [
+      {
+        id: 'seungmin-kim-research-progress',
+        presenter: '김승민',
+        title: '연구 진행 현황',
+        summary:
+          'Research Design의 공통·후보별 트랙을 정리하고, 피부 병변 데이터셋과 외부 검증, 모델·프롬프트 설계, 지도교수 피드백 반영 및 다음 실험 단계를 공유했습니다.',
+        image: 'seminars/2026-08-13-lab-seminar/seungmin-kim.png',
+      },
+      {
+        id: 'osworld-vlaa-gui-analysis',
+        title: 'OSWorld와 VLAA-GUI',
+        summary:
+          '실제 데스크톱 업무를 대상으로 하는 OSWorld 벤치마크와 VLAA-GUI의 역할 분담 구조를 검토하고, 작업 완료 여부 검증과 주요 구성요소의 기여를 살펴봤습니다.',
+        image: 'seminars/2026-08-13-lab-seminar/osworld-vlaa-gui.png',
+      },
+    ],
+  },
+  {
+    id: 'lab-seminar-2026-08-04',
+    title: '2026/08/04 LAB Seminar',
+    category: 'Seminar',
+    date: '2026-08-04',
+    description:
+      'A feasibility study presentation reviewing the next steps for a research topic after the first lab seminar.',
+    seminarPresentations: [
+      {
+        id: 'seungmin-kim-feasibility-study',
+        presenter: '김승민',
+        title: 'Feasibility Study, 그리고 다음 단계',
+        summary:
+          '연구 주제의 실현 가능성을 데이터셋, 라이선스, 컴퓨팅 자원, GPU·SFT 요구사항, 실행 계획의 여섯 축으로 검토하고 후보별 비교와 다음 연구 설계 단계를 정리했습니다.',
+        image: 'seminars/2026-08-04-lab-seminar/seungmin-kim.png',
+      },
+    ],
+  },
+  {
     id: 'aann-2026-qadc-paper-accepted',
     title: 'Paper accepted at AANN 2026',
     category: 'Paper Accepted',

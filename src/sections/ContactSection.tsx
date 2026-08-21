@@ -1,12 +1,11 @@
 import { AnimatedSection } from '../components/AnimatedSection'
 import { SectionWrapper } from '../components/SectionWrapper'
 import { contact } from '../data/contact'
-import { professor } from '../data/people'
 import { siteInfo } from '../data/siteInfo'
 
 const contactRows = [
-  { label: 'E-mail', value: professor.email, href: `mailto:${professor.email}` },
-  { label: 'Tel', value: professor.phone, href: `tel:${professor.phone}` },
+  { label: 'E-mail', value: contact.email, href: `mailto:${contact.email}` },
+  { label: 'Tel', value: contact.phone, href: `tel:${contact.phone}` },
   { label: 'Department', value: siteInfo.department.en },
   { label: 'Affiliation', value: `${siteInfo.college.en}, ${siteInfo.university.en}` },
 ]

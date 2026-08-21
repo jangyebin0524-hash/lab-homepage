@@ -16,7 +16,7 @@ export function RecruitmentBanner({ onNavigate }: RecruitmentBannerProps) {
           <span className="font-mono text-[10px] text-[#94A3B8]">NOTICE</span>
           <span>
           <span className="block text-xs font-medium text-[#64748B]">Recruitment</span>
-          <span className="block truncate text-sm font-medium text-[#475569]">모집 안내 Placeholder · 추후 업데이트 예정입니다.</span>
+          <span className="block truncate text-sm font-medium text-[#475569]">Information is announced after recruitment details are confirmed.</span>
         </span>
       </span>
       <ArrowRight className="shrink-0 text-[#475569]" size={18} aria-hidden="true" />

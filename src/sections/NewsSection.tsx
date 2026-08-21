@@ -114,8 +114,12 @@ export function NewsSection() {
                                 />
                               </div>
                               <div className="p-5 sm:p-6">
-                                <p className="text-xs font-medium text-[#64748B]">{presentation.presenter}</p>
-                                <h5 className="mt-2 text-base font-semibold text-[#1F2937]">{presentation.title}</h5>
+                                {presentation.presenter && (
+                                  <p className="text-xs font-medium text-[#64748B]">{presentation.presenter}</p>
+                                )}
+                                <h5 className={`${presentation.presenter ? 'mt-2' : ''} text-base font-semibold text-[#1F2937]`}>
+                                  {presentation.title}
+                                </h5>
                                 <p className="mt-3 text-sm leading-7 text-[#64748B]">{presentation.summary}</p>
                               </div>
                             </div>

@@ -15,10 +15,10 @@ export function MedicalBackdrop() {
 }
 
 const flowSteps = [
-  'Data Collection Placeholder',
-  'Preprocessing & Analysis Placeholder',
-  'AI Modeling Placeholder',
-  'Healthcare Service Application Placeholder',
+  'Medical Data',
+  'Analysis & Interpretation',
+  'Intelligent Systems',
+  'Healthcare Applications',
 ]
 
 export function MedicalHeroVisual() {
@@ -26,14 +26,14 @@ export function MedicalHeroVisual() {
     <div
       className="relative min-h-[360px] overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white p-5 sm:min-h-[420px] sm:p-7"
       role="img"
-      aria-label="Abstract placeholder visualization of medical data connections using points and lines"
+      aria-label="Abstract visualization of medical data connections using points and lines"
     >
       <MedicalBackdrop />
       <div className="relative min-h-[318px] sm:min-h-[366px]">
         <div className="flex items-start justify-between gap-5">
           <div>
             <p className="text-xs font-medium text-[#64748B]">Medical data network</p>
-            <p className="mt-2 text-xs text-[#94A3B8]">Abstract visual placeholder</p>
+            <p className="mt-2 text-xs text-[#94A3B8]">Research overview</p>
           </div>
           <span className="mt-1 h-px w-14 bg-[#CBD5E1]" aria-hidden="true" />
         </div>
@@ -57,7 +57,7 @@ export function MedicalHeroVisual() {
 
         <div className="absolute inset-x-0 bottom-0 flex items-center gap-3 border-t border-[#E2E8F0] pt-4 text-xs text-[#64748B]">
           <span className="font-mono text-[#94A3B8]">01—04</span>
-          <span>Biomedical data flow placeholder</span>
+          <span>Biomedical data flow</span>
         </div>
       </div>
     </div>
@@ -70,9 +70,9 @@ export function MedicalDataFlow() {
       <div className="flex items-end justify-between gap-5">
         <div>
           <p className="text-xs font-medium text-[#64748B]">Research process</p>
-          <h3 className="mt-2 text-xl font-semibold text-[#1F2937]">Medical IT Process Placeholder</h3>
+          <h3 className="mt-2 text-xl font-semibold text-[#1F2937]">Medical IT Research Process</h3>
         </div>
-        <span className="hidden text-xs text-[#94A3B8] sm:block">Overview Placeholder</span>
+        <span className="hidden text-xs text-[#94A3B8] sm:block">Data to healthcare</span>
       </div>
       <div className="mt-7 grid gap-6 sm:grid-cols-2 md:grid-cols-4">
         {flowSteps.map((label, index) => (
@@ -97,8 +97,8 @@ export function MedicalImagingPlaceholder() {
       <span className="grid h-14 w-14 place-items-center rounded-xl border border-[#CBD5E1] bg-white/85 text-[#475569] shadow-sm">
         <ScanLine size={27} aria-hidden="true" />
       </span>
-      <p className="mt-4 text-sm font-semibold text-[#1F2937]">Medical image placeholder</p>
-      <p className="mt-1 text-xs text-[#64748B]">TODO · Visual data slot</p>
+      <p className="mt-4 text-sm font-semibold text-[#1F2937]">Medical imaging research</p>
+      <p className="mt-1 text-xs text-[#64748B]">Visual research overview</p>
     </div>
   )
 }
@@ -109,16 +109,16 @@ export function DiagnosticPanel() {
       <div className="flex items-center justify-between gap-4">
         <div>
           <p className="text-[10px] font-semibold uppercase text-[#64748B]">Diagnostic interface</p>
-          <h3 className="mt-1 text-lg font-semibold">AI System Placeholder</h3>
+          <h3 className="mt-1 text-lg font-semibold">Research System Overview</h3>
         </div>
         <span className="h-2 w-2 rounded-full bg-[#CBD5E1]" aria-label="Placeholder status" />
       </div>
       <div className="mt-6 space-y-3">
-        {['Input Placeholder', 'Process Placeholder', 'Result Placeholder'].map((label, index) => (
+        {['Input', 'Analysis', 'Output'].map((label, index) => (
           <div className="rounded-xl border border-[#E2E8F0] bg-[#F8FAFC] p-3" key={label}>
             <div className="flex items-center justify-between text-xs">
               <span className="font-medium text-[#1F2937]">{label}</span>
-              <span className="font-mono text-[10px] text-[#64748B]">Placeholder</span>
+              <span className="font-mono text-[10px] text-[#64748B]">Overview</span>
             </div>
             <div className="mt-3 flex gap-1.5" aria-hidden="true">
               {['w-1/2', 'w-1/3', 'w-1/4'].map((widthClass, barIndex) => (

@@ -4,9 +4,24 @@ import { professor } from '../data/people'
 import { siteInfo } from '../data/siteInfo'
 
 const outlineItems = [
-  { number: '01', title: 'Mission', description: '연구실 목표가 추후 추가될 예정입니다.' },
-  { number: '02', title: 'Vision', description: '연구실 비전이 추후 추가될 예정입니다.' },
-  { number: '03', title: 'Research Direction', description: '주요 연구 방향이 추후 추가될 예정입니다.' },
+  {
+    number: '01',
+    title: 'Mission',
+    description:
+      'To explore how medical data, artificial intelligence, and digital technologies can support more reliable, accessible, and human-centered healthcare.',
+  },
+  {
+    number: '02',
+    title: 'Vision',
+    description:
+      'To connect healthcare needs with data-driven and intelligent technologies through technically rigorous and clinically meaningful research.',
+  },
+  {
+    number: '03',
+    title: 'Research Direction',
+    description:
+      'Medical artificial intelligence, biomedical data analytics, digital healthcare systems, and biomedical signal processing.',
+  },
 ]
 
 const profileFields = [
