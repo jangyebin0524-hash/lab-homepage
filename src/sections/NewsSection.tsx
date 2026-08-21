@@ -115,6 +115,18 @@ export function NewsSection() {
                                   />
                                 </div>
                               )}
+                              {!presentation.image && presentation.previewPage && (
+                                <div className="aspect-video overflow-hidden border-b border-[#E2E8F0] bg-[#F8FAFC]">
+                                  <iframe
+                                    src={`${import.meta.env.BASE_URL}${presentation.previewPage}`}
+                                    title={`${presentation.title} presentation preview`}
+                                    className="pointer-events-none h-full w-full border-0 bg-white"
+                                    loading="lazy"
+                                    sandbox=""
+                                    tabIndex={-1}
+                                  />
+                                </div>
+                              )}
                               <div className="p-5 sm:p-6">
                                 {presentation.presenter && (
                                   <p className="text-xs font-medium text-[#64748B]">{presentation.presenter}</p>

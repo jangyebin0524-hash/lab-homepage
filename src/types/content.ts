@@ -71,6 +71,7 @@ export interface NewsItem {
     title: string
     summary: string
     image?: string
+    previewPage?: string
   }[]
 }
 
