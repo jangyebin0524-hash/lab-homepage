@@ -70,8 +70,7 @@ export interface NewsItem {
     presenter?: string
     title: string
     summary: string
-    image?: string
-    previewPage?: string
+    image: string
   }[]
 }
 

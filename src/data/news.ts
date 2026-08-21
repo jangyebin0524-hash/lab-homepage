@@ -31,7 +31,7 @@ export const newsItems: NewsItem[] = [
         title: 'VLM & Physics-aware 생성형 시뮬레이션 환경 구축',
         summary:
           'VLM 기반 설비 인식·물성 추론과 Physics-aware 데이터셋·시뮬레이션 환경 구축을 중심으로, 관련 데이터셋·표준·도구 검토와 8–12월 실행 계획을 공유했습니다.',
-        previewPage: 'seminars/2026-08-13-lab-seminar/soohyun-lee.html',
+        image: 'seminars/2026-08-13-lab-seminar/soohyun-lee.svg',
       },
     ],
   },
