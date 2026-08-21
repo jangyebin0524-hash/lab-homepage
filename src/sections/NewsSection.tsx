@@ -105,14 +105,16 @@ export function NewsSection() {
                         <div className="mt-7 grid gap-5 border-t border-[#E2E8F0] pt-6 lg:grid-cols-2">
                           {item.seminarPresentations.map((presentation) => (
                             <div className="surface-card interactive-card overflow-hidden" key={presentation.id}>
-                              <div className="aspect-video overflow-hidden border-b border-[#E2E8F0] bg-[#F8FAFC]">
-                                <img
-                                  src={`${import.meta.env.BASE_URL}${presentation.image}`}
-                                  alt={`${presentation.title} presentation preview`}
-                                  className="h-full w-full object-cover"
-                                  loading="lazy"
-                                />
-                              </div>
+                              {presentation.image && (
+                                <div className="aspect-video overflow-hidden border-b border-[#E2E8F0] bg-[#F8FAFC]">
+                                  <img
+                                    src={`${import.meta.env.BASE_URL}${presentation.image}`}
+                                    alt={`${presentation.title} presentation preview`}
+                                    className="h-full w-full object-cover"
+                                    loading="lazy"
+                                  />
+                                </div>
+                              )}
                               <div className="p-5 sm:p-6">
                                 {presentation.presenter && (
                                   <p className="text-xs font-medium text-[#64748B]">{presentation.presenter}</p>

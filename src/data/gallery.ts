@@ -2,6 +2,15 @@ import type { GalleryItem } from '../types/content'
 
 export const gallery: GalleryItem[] = [
   {
+    id: 'lab-seminar-2026-08-04-sungmoon-park',
+    date: '2026.08.04',
+    title: 'LAB Seminar · DadaDoc Healthcare R&BD',
+    description:
+      'A presentation on preparing an AI analysis and validation system for pediatric otitis media tympanic-membrane images.',
+    image: 'seminars/2026-08-04-lab-seminar/sungmoon-park.png',
+    alt: 'DadaDoc healthcare R and D presentation title slide from the 2026 August 4 lab seminar.',
+  },
+  {
     id: 'lab-seminar-2026-08-13-seungmin-kim',
     date: '2026.08.13',
     title: 'LAB Seminar · Research Progress Report',

@@ -7,7 +7,7 @@ export const newsItems: NewsItem[] = [
     category: 'Seminar',
     date: '2026-08-13',
     description:
-      'Two presentations on medical AI research progress and an OSWorld and VLAA-GUI benchmark review.',
+      'Three presentations on medical AI research progress, a physics-aware simulation environment, and an OSWorld and VLAA-GUI benchmark review.',
     seminarPresentations: [
       {
         id: 'seungmin-kim-research-progress',
@@ -19,10 +19,18 @@ export const newsItems: NewsItem[] = [
       },
       {
         id: 'osworld-vlaa-gui-analysis',
+        presenter: '김서완',
         title: 'OSWorld와 VLAA-GUI',
         summary:
           '실제 데스크톱 업무를 대상으로 하는 OSWorld 벤치마크와 VLAA-GUI의 역할 분담 구조를 검토하고, 작업 완료 여부 검증과 주요 구성요소의 기여를 살펴봤습니다.',
         image: 'seminars/2026-08-13-lab-seminar/osworld-vlaa-gui.png',
+      },
+      {
+        id: 'soohyun-lee-vlm-physics-aware',
+        presenter: '이수현',
+        title: 'VLM & Physics-aware 생성형 시뮬레이션 환경 구축',
+        summary:
+          'VLM 기반 설비 인식·물성 추론과 Physics-aware 데이터셋·시뮬레이션 환경 구축을 중심으로, 관련 데이터셋·표준·도구 검토와 8–12월 실행 계획을 공유했습니다.',
       },
     ],
   },
@@ -32,7 +40,7 @@ export const newsItems: NewsItem[] = [
     category: 'Seminar',
     date: '2026-08-04',
     description:
-      'A feasibility study presentation reviewing the next steps for a research topic after the first lab seminar.',
+      'Two presentations covering research feasibility and DadaDoc healthcare R&BD preparation after the first lab seminar.',
     seminarPresentations: [
       {
         id: 'seungmin-kim-feasibility-study',
@@ -41,6 +49,14 @@ export const newsItems: NewsItem[] = [
         summary:
           '연구 주제의 실현 가능성을 데이터셋, 라이선스, 컴퓨팅 자원, GPU·SFT 요구사항, 실행 계획의 여섯 축으로 검토하고 후보별 비교와 다음 연구 설계 단계를 정리했습니다.',
         image: 'seminars/2026-08-04-lab-seminar/seungmin-kim.png',
+      },
+      {
+        id: 'sungmoon-park-dadadoc-healthcare',
+        presenter: '박성문',
+        title: 'DadaDoc 헬스케어 R&BD',
+        summary:
+          '소아 중이염 고막 이미지 기반 AI 분석·검증 체계 구축을 주제로, 공개 데이터 리허설과 AIHub 안심존 실행 준비 현황을 공유했습니다.',
+        image: 'seminars/2026-08-04-lab-seminar/sungmoon-park.png',
       },
     ],
   },
